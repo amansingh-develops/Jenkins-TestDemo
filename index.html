@@ -3,130 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Modern User Registration Form with Jenkins CI/CD Automated Testing">
-  <title>User Registration - Jenkins CI/CD Demo</title>
+  <meta name="description" content="Registration Form with Name, Email, Contact Number, and Submit button">
+  <title>Sign In / Register</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background-decorations">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
 
-  <main class="container">
-    <div class="form-card">
-      <header class="card-header">
-        <div class="badge">
-          <span class="badge-dot"></span>
-          <span>CI/CD Automated Pipeline</span>
-        </div>
-        <h1 class="card-title">Registration Portal</h1>
-        <p class="card-subtitle">Please enter your details below to submit the registration form.</p>
-      </header>
+  <div class="card-container">
+    <!-- Left Column: Form -->
+    <div class="form-section">
+      <h1 class="form-title">Signin</h1>
 
-      <form id="registration-form" action="#" method="POST" novalidate>
-        <!-- Full Name Field -->
-        <div class="form-group">
-          <label for="name" class="form-label">
-            Full Name <span class="required">*</span>
-          </label>
-          <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              class="form-input" 
-              placeholder="e.g. Aman Singh" 
-              required
-              autocomplete="name"
-            >
-          </div>
-          <span class="error-message" id="name-error">Please enter your full name.</span>
+      <form id="registration-form" action="#" method="POST">
+        <!-- Name Field -->
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="ByteWebster (Full Name)" 
+            required 
+            autocomplete="name"
+          >
         </div>
 
         <!-- Email Field -->
-        <div class="form-group">
-          <label for="email" class="form-label">
-            Email Address <span class="required">*</span>
-          </label>
-          <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              class="form-input" 
-              placeholder="e.g. aman@example.com" 
-              required
-              autocomplete="email"
-            >
-          </div>
-          <span class="error-message" id="email-error">Please enter a valid email address.</span>
+        <div class="input-group">
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Email Address" 
+            required 
+            autocomplete="email"
+          >
         </div>
 
         <!-- Contact Number Field -->
-        <div class="form-group">
-          <label for="contact" class="form-label">
-            Contact Number <span class="required">*</span>
-          </label>
-          <div class="input-wrapper">
-            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <input 
-              type="tel" 
-              id="contact" 
-              name="contact" 
-              class="form-input" 
-              placeholder="e.g. +91 9876543210" 
-              required
-              autocomplete="tel"
-            >
-          </div>
-          <span class="error-message" id="contact-error">Please enter a valid phone number.</span>
+        <div class="input-group">
+          <input 
+            type="tel" 
+            id="contact" 
+            name="contact" 
+            placeholder="Contact Number" 
+            required 
+            autocomplete="tel"
+          >
         </div>
 
         <!-- Submit Button -->
-        <div class="form-actions">
-          <button type="submit" id="submit" class="submit-btn">
-            <span class="btn-text">Submit Details</span>
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
+        <button type="submit" id="submit" class="submit-btn">Signin</button>
+
+        <!-- Social Links -->
+        <div class="social-section">
+          <p class="social-text">or signin with</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon facebook" title="Facebook">f</a>
+            <a href="#" class="social-icon google" title="Google">G+</a>
+            <a href="#" class="social-icon linkedin" title="LinkedIn">in</a>
+          </div>
         </div>
       </form>
-
-      <!-- Status Toast / Feedback -->
-      <div id="status-card" class="status-card hidden">
-        <div class="status-icon success">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </div>
-        <div class="status-content">
-          <h2 class="status-title">Submission Successful!</h2>
-          <p class="status-desc" id="status-desc">Thank you! Your information has been registered.</p>
-        </div>
-      </div>
-
-      <footer class="card-footer">
-        <p>Verified with Automated CI/CD Testing &bull; Jenkins Pipeline</p>
-      </footer>
     </div>
-  </main>
+
+    <!-- Right Column: Welcome Banner -->
+    <div class="welcome-section">
+      <div class="welcome-content">
+        <h2 class="welcome-title">Welcome back!</h2>
+        <p class="welcome-text">
+          Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and enjoyable time away.
+        </p>
+        <button type="button" class="signup-pill-btn">No account yet? Signup.</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
