@@ -1,69 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Registration Form with Name, Email, Contact Number, and Submit button">
-  <title>Sign In / Register</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 380px;
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555555;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-
-  <div class="card-container">
-    <!-- Left Column: Form -->
-    <div class="form-section">
-      <h1 class="form-title">Signin</h1>
-
-      <form id="registration-form" action="#" method="POST">
-        <!-- Name Field -->
-        <div class="input-group">
-          <input type="text" id="name" name="name" placeholder="Full Name" required autocomplete="name">
-        </div>
-
-        <!-- Email Field -->
-        <div class="input-group">
-          <input type="email" id="email" name="email" placeholder="Email Address" required autocomplete="email">
-        </div>
-
-        <!-- Contact Number Field -->
-        <div class="input-group">
-          <input type="tel" id="contact" name="contact" placeholder="Contact Number" required autocomplete="tel">
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" id="submit" class="submit-btn">Signin</button>
-
-        <!-- Social Links -->
-        <div class="social-section">
-          <p class="social-text">or signin with</p>
-          <div class="social-icons">
-            <a href="#" class="social-icon facebook" title="Facebook">f</a>
-            <a href="#" class="social-icon google" title="Google">G+</a>
-            <a href="#" class="social-icon linkedin" title="LinkedIn">in</a>
-          </div>
-        </div>
-      </form>
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" id="rollNumber" name="rollNumber" placeholder="Enter roll number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Select Course --</option>
+                    <option value="Computer Science Engineering">Computer Science Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="DevOps and Cloud Computing">DevOps and Cloud Computing</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">Submit Registration</button>
+        </form>
     </div>
-
-    <!-- Right Column: Welcome Banner -->
-    <div class="welcome-section">
-      <div class="welcome-content">
-        <h2 class="welcome-title">Welcome back!</h2>
-        <p class="welcome-text">
-          Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and
-          enjoyable time away.
-        </p>
-        <button type="button" class="signup-pill-btn">No account yet? Signup.</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
-
 </html>
